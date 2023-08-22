@@ -28,7 +28,7 @@ INSERT INTO species (name) VALUES ('Digimon');
 UPDATE animals SET species_id=(SELECT id FROM species WHERE name='Digimon') WHERE name LIKE '%mon';
 UPDATE animals SET species_id=(SELECT id FROM species WHERE name='Pokemon') WHERE species_id IS NULL;
 
-UPDATE animals SET owners_id=(SELECT id FROM owners WHERE full_name='Sam Smith') WHERE name='Agumon';
+UPDATE animals SET owners_id=(SELECT id FROM owners WHERE full_name='San Smith') WHERE name='Agumon';
 UPDATE animals SET owners_id=(SELECT id FROM owners WHERE full_name='Jennifer Orwell') WHERE name IN('Gabumon', 'Pikachu');
 UPDATE animals SET owners_id=(SELECT id FROM owners WHERE full_name='Bob') WHERE name IN('Devimon', 'Plantmon');
 UPDATE animals SET owners_id=(SELECT id FROM owners WHERE full_name='Melody Pond') WHERE name IN('Charmander', 'Squirtle', 'Blossom');
