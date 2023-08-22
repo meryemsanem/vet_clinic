@@ -45,9 +45,9 @@ SELECT species , MIN(weight_kg) AS minimum, MAX(weight_kg) AS maximum FROM anima
 SELECT species , AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
 --QUERIES USING JOIN
-SELECT * FROM animals INNER JOIN owners ON animals.owners_id = owners_id WHERE owners.full_name='Melody Pond';
+SELECT a.name FROM animals a JOIN owners o ON a.owners_id=o.id WHERE o.full_name='Melody Pond';
 
-SELECT * FROM animals INNER JOIN species ON animals.species_id = species_id WHERE species.name='Pokemon';
+SELECT a.name FROM animals a JOIN species s ON a.species_id = s_id WHERE s.name='Pokemon';
 
 SELECT owners.full_name,animals.name FROM owners LEFT JOIN animals ON owners.id=animals.owners_id;
 
