@@ -36,3 +36,5 @@ CREATE TABLE vets(
 );
 
 CREATE TABLE specializations(species_id INT,vets_id INT,FOREIGN KEY (species_id) REFERENCES species(id),FOREIGN KEY (vets_id) REFERENCES vets(id));
+
+CREATE TABLE visits(animals_id INT,vets_id INT,FOREIGN KEY (animals_id) REFERENCES animals(id),FOREIGN KEY (vets_id) REFERENCES vets(id));
